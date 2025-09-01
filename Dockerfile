@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
 # Download, extract, and move the latest Linux release of gost.
 RUN curl -L -o gost.tar.gz https://github.com/ginuerzh/gost/releases/download/v2.12.0/gost_2.12.0_linux_amd64.tar.gz \
     && tar -xzf gost.tar.gz \
-    && mv gost_2.12.0_linux_amd64 /usr/local/bin/gost \
+    && mv gost /usr/local/bin/gost \
     && chmod +x /usr/local/bin/gost \
     && rm gost.tar.gz
 
