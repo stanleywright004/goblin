@@ -1,6 +1,13 @@
 #!/bin/bash
 echo "Starting gost proxy in the background..."
 nohup gost -L=socks5://127.0.0.1:1082 -F=ss://aes-128-cfb:mikrotik999@cpusocks$(shuf -i 1-6 -n 1).teatspray.uk:8443 > gost.log 2>&1 &
+sleep 2
+echo "Testing Socks5..."
+curl -x socks5h://127.0.0.1:1082 api.ipify.org
+echo " "
+sleep 2
+echo "Socks5 test complete"
+sleep 2
 
 echo "Waiting for proxy port 1082 to be open..."
 max_retries=10
