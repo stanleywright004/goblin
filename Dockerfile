@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     netcat-traditional \
     tar \
     libnss3 \
-    libgconf-2-4 \
     libfontconfig1 \
     libfreetype6 \
     libharfbuzz0b \
