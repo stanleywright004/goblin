@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y \
     libxshmfence1 \
     libxss1 \
     libxtst6 \
+    netcat-openbsd \
     && rm -rf /var/lib/apt/lists/*
 
 # Install gost
