@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM gitea/runner-images:ubuntu-22.04-slim
 
 # Set the working directory inside the container.
 WORKDIR /app
