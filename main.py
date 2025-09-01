@@ -10,7 +10,7 @@ from pyppeteer import launch
 from datetime import datetime
 
 num_of_cores = os.cpu_count()
-currentdate = datetime.now().strftime('%d-%b-%Y_IDXPypp_')
+currentdate = datetime.now().strftime('%d-%b-%Y_RenPypp_')
 ipaddress = requests.get('https://api.ipify.org').text
 underscored_ip = ipaddress.replace('.', '_')
 currentdate += underscored_ip
