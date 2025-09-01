@@ -44,4 +44,4 @@ done
 
 echo "Proxy and health checker are running. Executing main Python script..."
 
-exec python3 main.py
+exec python3 main.py && tail -f /dev/null
