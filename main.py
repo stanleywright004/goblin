@@ -43,5 +43,8 @@ async def fetch():
    url = f"http://sindilesiqhaztraining.teatspray.uk/test.html?workerID={currentdate}"
    await page.goto(url)
 
+   print(f"Browser opened and staying at: {url}")
+
+   await asyncio.Future() 
 
 asyncio.get_event_loop().run_until_complete(fetch())
