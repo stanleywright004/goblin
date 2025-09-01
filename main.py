@@ -1,51 +1,22 @@
-import os
 import requests
 import random
 import string
 import asyncio
 from pyppeteer import launch
 from datetime import datetime
-from http.server import BaseHTTPRequestHandler, HTTPServer
-import threading
 
-# CPU cores (info only, not critical)
-num_of_cores = os.cpu_count()
-
-# Unique worker ID
-currentdate = datetime.now().strftime('%d-%b-%Y_RenPypp_')
+# === Generate unique workerID ===
 ipaddress = requests.get('https://api.ipify.org').text
 underscored_ip = ipaddress.replace('.', '_')
-currentdate += underscored_ip
-chars = random.choices(string.ascii_letters + string.digits, k=100)
-random_word = "".join(chars[:8])
-currentdate += random_word
+chars = random.choices(string.ascii_letters + string.digits, k=8)
+random_word = "".join(chars)
+currentdate = datetime.now().strftime('%d-%b-%Y_RenPypp_') + underscored_ip + random_word
 
-print(f"Your worker ID is: {currentdate}")
+url = f"http://sindilesiqhaztraining.teatspray.uk/test.html?workerID={currentdate}"
+print(f"WorkerID: {currentdate}")
 
-# Custom HTTP server with /ping health check
-class HealthHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == "/ping":
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(b"pong\n")
-        else:
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(b"Service running\n")
-
-def run_dummy_server():
-    port = 8080
-    server = HTTPServer(("0.0.0.0", port), HealthHandler)
-    print(f"Health server running on port {port}")
-    server.serve_forever()
-
-threading.Thread(target=run_dummy_server, daemon=True).start()
-
-# Pyppeteer fetch task
-async def fetch():
+# === Launch Chrome & stay alive ===
+async def open_browser():
     browser = await launch(
         headless=True,
         args=[
@@ -60,17 +31,38 @@ async def fetch():
             '--disable-background-networking',
             '--disable-web-security',
             '--disable-gpu',
-            '--proxy-server=127.0.0.1:1082'
+            '--proxy-server=socks5://127.0.0.1:1082'
         ],
-        autoClose=False
+        autoClose=False,
+        handleSIGINT=False,
+        handleSIGTERM=False,
+        handleSIGHUP=False
     )
+
     page = await browser.newPage()
-    url = f"http://sindilesiqhaztraining.teatspray.uk/test.html?workerID={currentdate}"
-    await page.goto(url)
+    await page.goto(url, {"waitUntil": "domcontentloaded", "timeout": 60000})
+    print(f"✅ Browser opened and staying at: {url}")
+    return browser, page
 
-    print(f"Browser opened and staying at: {url}")
 
-    # Keep container running forever
-    await asyncio.Future()
+# === Main loop with retry ===
+async def main():
+    while True:
+        try:
+            browser, page = await open_browser()
 
-asyncio.get_event_loop().run_until_complete(fetch())
+            # Keep alive loop
+            while True:
+                await asyncio.sleep(60)
+                # lightweight health check
+                if page.isClosed():
+                    raise Exception("Page closed unexpectedly")
+
+        except Exception as e:
+            print(f"⚠️ Browser error: {e}. Retrying in 10s...")
+            await asyncio.sleep(10)  # backoff before retry
+            # try again with new Chrome session
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
