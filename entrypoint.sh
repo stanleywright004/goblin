@@ -14,7 +14,7 @@ max_retries=10
 retry_count=0
 while ! nc -z 127.0.0.1 1082 && [ $retry_count -lt $max_retries ]; do
   echo "Port not open yet. Retrying in 2 seconds..."
-  sleep 2
+  sleep 6
   retry_count=$((retry_count+1))
 done
 
