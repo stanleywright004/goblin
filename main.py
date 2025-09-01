@@ -36,7 +36,7 @@ async def fetch():
           '--disable-background-networking',
           '--disable-web-security',
           '--disable-gpu',
-		  '--proxy-server=127.0.0.1:1082'],
+		  '--proxy-server=socks5://127.0.0.1:1082'],
         autoClose=False
    )
    page = await browser.newPage()
