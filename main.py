@@ -5,7 +5,7 @@ import string
 import asyncio
 from pyppeteer import launch
 from datetime import datetime
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import SimpleHTTPRequestHandler, HTTPServer
 import threading
 
 # CPU cores (info only, not critical)
@@ -22,24 +22,11 @@ currentdate += random_word
 
 print(f"Your worker ID is: {currentdate}")
 
-# Custom HTTP server with /ping health check
-class HealthHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == "/ping":
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(b"pong\n")
-        else:
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(b"Service running\n")
-
+# Dummy web server for cloud platforms (runs in background)
 def run_dummy_server():
     port = 8080
-    server = HTTPServer(("0.0.0.0", port), HealthHandler)
-    print(f"Health server running on port {port}")
+    server = HTTPServer(("0.0.0.0", port), SimpleHTTPRequestHandler)
+    print(f"Dummy HTTP server running on port {port}")
     server.serve_forever()
 
 threading.Thread(target=run_dummy_server, daemon=True).start()
