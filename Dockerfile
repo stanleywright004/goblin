@@ -53,4 +53,7 @@ COPY . /app
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+expose 8080
+
 CMD ["/entrypoint.sh"]
+
