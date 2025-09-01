@@ -1,11 +1,32 @@
-FROM gitea/runner-images:ubuntu-22.04-slim
+# Use a minimal Python 3.10 image.
+FROM python:3.10-slim
 
 # Set the working directory inside the container.
 WORKDIR /app
 
 # Install system dependencies for Chromium, along with curl for downloading, tar for extraction, and netcat for checking ports.
 RUN apt-get update && apt-get install -y \
-    python3 python3-venv libnss3-dev gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libgbm-dev netcat \
+    chromium \
+    curl \
+    netcat-traditional \
+    tar \
+    libnss3 \
+    libgconf-2-4 \
+    libfontconfig1 \
+    libfreetype6 \
+    libharfbuzz0b \
+    libice6 \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    libx11-6 \
+    fonts-liberation \
+    libxcursor1 \
+    libxrandr2 \
+    libxcb1 \
+    libxss1 \
+    libdbus-1-3 \
+    libxkbcommon-x11-0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Download, extract, and move the latest Linux release of gost.
