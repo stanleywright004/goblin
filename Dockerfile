@@ -1,5 +1,6 @@
 FROM python:3.11-slim
 
+# Install system dependencies for Chromium
 RUN apt-get update && apt-get install -y \
     python3-venv \
     python3-pip \
@@ -32,21 +33,23 @@ RUN apt-get update && apt-get install -y \
     libxtst6 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget -O /usr/local/bin/gost https://github.com/go-gost/gost/releases/download/v3.0.0/gost-linux-amd64 \
-    && chmod +x /usr/local/bin/gost
+# Install gost
+RUN wget https://github.com/ginuerzh/gost/releases/download/v2.12.0/gost_2.12.0_linux_amd64.tar.gz && tar -xf gost_2.12.0_linux_amd64.tar.gz && mv gost /usr/local/bin/ && chmod +x /usr/local/bin/gost && rm gost_2.12.0_linux_amd64.tar.gz
 
+# Setup venv
 RUN python3 -m venv /venv
 ENV PATH="/venv/bin:$PATH"
 
+# Install Python requirements
 COPY requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip3 install --upgrade pip \
     && pip3 install -r requirements.txt
 
-RUN python3 -m pyppeteer install
-
+# Copy app code
 COPY . /app
 
+# Entrypoint
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
