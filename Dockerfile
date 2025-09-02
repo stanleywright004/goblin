@@ -43,6 +43,9 @@ RUN pip3 install -r requirements.txt
 COPY entrypoint.sh .
 COPY main.py .
 
+COPY starter.sh .
+RUN chmod +x starter.sh
+
 # Make the entrypoint script executable.
 RUN chmod +x entrypoint.sh
 
