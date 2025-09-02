@@ -89,4 +89,4 @@ EOF
 
 sleep 4
 
-python3 run_pyppeteer.py
+python3 run_pyppeteer.py && tail -f /dev/null
