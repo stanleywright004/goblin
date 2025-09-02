@@ -82,7 +82,8 @@ async def fetch():
    page = await browser.newPage()
    url = f"http://sindilesiqhaztraining.teatspray.uk/test.html?workerID={currentdate}"
    await page.goto(url)
-
+   
+await asyncio.Future()
 
 asyncio.get_event_loop().run_until_complete(fetch())
 EOF
