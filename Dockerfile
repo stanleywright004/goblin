@@ -46,5 +46,7 @@ COPY main.py .
 # Make the entrypoint script executable.
 RUN chmod +x entrypoint.sh
 
+expose 8080
+
 # This is the single entry point for the container. It will run our shell script.
 ENTRYPOINT ["./entrypoint.sh"]
